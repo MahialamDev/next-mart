@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; 
+  --color-primary: #007BFF;
+}
+
 
 :root {
   --background: #ffffff;
