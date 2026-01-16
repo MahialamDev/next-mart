@@ -1,12 +1,19 @@
 import Container from '@/components/Container/Container';
 import React from 'react';
+import Hero from './_Home/Hero';
+import CategorySection from './_Home/CategorySection';
+import PopularItems from './_Home/PopularItems';
+import SpecialOffer from './_Home/SpecialOffer';
+import ReviewSection from './_Home/Review';
 
 const Home = () => {
   return (
     <Container>
-      <div>
-      <h1 className='text-2xl'>Hello World</h1>
-    </div>
+      <Hero />
+      <CategorySection />
+      <PopularItems />
+      <SpecialOffer />
+      <ReviewSection />
     </Container>
   );
 };
