@@ -4,6 +4,9 @@ import React from 'react';
 
 const getItems = async() => {
     const res = await fetch(`https://taxi-kitchen-api.vercel.app/api/v1/foods/random`);
+    await new Promise((resolve) => {
+        setTimeout(resolve, 1000)
+    })
     const data = await res.json();
     return data.foods || [];
 }

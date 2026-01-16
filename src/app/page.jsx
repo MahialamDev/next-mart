@@ -5,6 +5,7 @@ import CategorySection from './_Home/CategorySection';
 import PopularItems from './_Home/PopularItems';
 import SpecialOffer from './_Home/SpecialOffer';
 import ReviewSection from './_Home/Review';
+import ContactPage from './_Home/ContactPage';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <PopularItems />
       <SpecialOffer />
       <ReviewSection />
+      <ContactPage />
     </Container>
   );
 };

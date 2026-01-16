@@ -3,18 +3,25 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Logo from '../UI/Logo/Logo';
 import { Menu, X } from 'lucide-react'; // Lucide-react icons use kar rahe hain
+import MyLink from '../UI/MyLink/MyLink';
+import { usePathname } from 'next/navigation';
 
 const links = (
     <>
-        <li><Link href={'/'} className="hover:text-blue-600 transition">Home</Link></li>
-        <li><Link href={'/about'} className="hover:text-blue-600 transition">About</Link></li>
-        <li><Link href={'/login'} className="hover:text-blue-600 transition">Login</Link></li>
-        <li><Link href={'/items'} className="hover:text-blue-600 transition">Items</Link></li>
+        <li><MyLink href={'/'} className="hover:text-blue-600 transition">Home</MyLink></li>
+        <li><MyLink href={'/about'} className="hover:text-blue-600 transition">About</MyLink></li>
+        <li><MyLink href={'/login'} className="hover:text-blue-600 transition">Login</MyLink></li>
+        <li><MyLink href={'/items'} className="hover:text-blue-600 transition">Items</MyLink></li>
     </>
 );
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    if (pathname.startsWith('/dashboard')) {
+        return <></>
+    }
 
     return (
         <header className='h-20 flex items-center sticky top-0 w-full bg-white/90 backdrop-blur-xl z-50 border-b border-gray-500/20'>

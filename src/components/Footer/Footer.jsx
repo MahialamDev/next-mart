@@ -1,11 +1,17 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
 import Logo from '../UI/Logo/Logo'; // Apnar Logo component path
 import Container from '../Container/Container';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+const pathname = usePathname();
 
+    if (pathname.startsWith('/dashboard')) {
+        return <></>
+    }
     return (
         <footer className="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
             <Container >
