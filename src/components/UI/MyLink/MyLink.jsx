@@ -6,7 +6,7 @@ const MyLink = ({ children, href }) => {
     const pathname = usePathname();
     const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
     return (
-        <Link className={`${isActive ? 'text-primary' : ''}`} href={href}>
+        <Link className={`${isActive ? 'text-primary' : ''} font-semibold`} href={href}>
             {children}
         </Link>
     );

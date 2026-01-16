@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 const ItemCard = ({ item }) => {
     const { id, foodImg, title, price, category } = item; 
     
     return (
+        <Link href={`/items/details/${id}`}>
         <div className="group bg-white border border-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             {/* Image Section */}
             {/* Mobile par height h-32 ya h-40 rakhi hai taaki screen space manage ho */}
@@ -37,6 +39,7 @@ const ItemCard = ({ item }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
