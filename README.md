@@ -108,12 +108,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ```
 
-### Kivabe use korben?
-1. Apnar project folder-e `README.md` namer file-ti khulun.
-2. Uporer code-tuku copy kore paste korun.
-3. Save kore GitHub-e push kore din: 
-   `git add .` -> `git commit -m "docs: update readme"` -> `git push`.
-
-**Next Step:** Apnar ki project deployment ba onno kono technical issue-te help dorkar?
-
-```
