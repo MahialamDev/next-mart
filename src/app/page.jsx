@@ -6,6 +6,7 @@ import PopularItems from './_Home/PopularItems';
 import SpecialOffer from './_Home/SpecialOffer';
 import ReviewSection from './_Home/Review';
 import ContactPage from './_Home/ContactPage';
+import WorkProcess from './_Home/WorkProcess';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <PopularItems />
       <SpecialOffer />
       <ReviewSection />
+      <WorkProcess />
       <ContactPage />
     </Container>
   );
