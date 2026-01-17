@@ -2,16 +2,19 @@
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
+import useAuth from '@/Hooks/useAuth';
 
 const Login = () => {
     const router = useRouter();
-
+    const { setIsAuth } = useAuth();
     const handleMockLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
        
         if (email === 'admin@gmail.com' && password === '123456') {
+            document.cookie = "auth=true; path=/";
+            setIsAuth(true);
             router.push('/dashboard')
         } else {
             alert("Invalid Credentials! Try: admin@gmail.com / 123456")

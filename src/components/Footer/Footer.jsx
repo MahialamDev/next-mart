@@ -4,6 +4,7 @@ import React from 'react';
 import Logo from '../UI/Logo/Logo'; // Apnar Logo component path
 import Container from '../Container/Container';
 import { usePathname } from 'next/navigation';
+import { Facebook, Instagram, Linkedin, X } from 'lucide-react';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -26,11 +27,15 @@ const pathname = usePathname();
                     </p>
                     <div className="flex gap-4">
                         {/* Social Icons Placeholder */}
-                        {['FB', 'IG', 'TW', 'LI'].map((social) => (
-                            <div key={social} className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold cursor-pointer hover:bg-blue-600 hover:text-white transition-all">
-                                {social}
-                            </div>
-                        ))}
+                        {[<Facebook />, <Instagram />, <X />, <Linkedin />].map((social, index) => (
+  <div
+    key={index} // ✅ unique key
+    className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
+  >
+    {social}
+  </div>
+))}
+
                     </div>
                 </div>
 

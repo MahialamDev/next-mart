@@ -30,7 +30,7 @@ const WorkProcess = () => {
         <section className="py-20 bg-white">
             <div className="text-center max-w-2xl mx-auto mb-16">
                 <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">Step by Step</span>
-                <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-2 italic">How We <span className="text-blue-600">Work</span></h2>
+                <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mt-2 ">How We <span className="text-blue-600">Work</span></h2>
                 <p className="text-gray-500 mt-4 leading-relaxed">Ordering your favorite food has never been easier. Just follow these simple steps and get your food in no time.</p>
             </div>
 

@@ -1,7 +1,16 @@
 import Container from '@/components/Container/Container';
+import { Facebook, Instagram, Linkedin, X } from 'lucide-react';
+
 import React from 'react';
 
 const ContactPage = () => {
+    const icons = [
+        { id: 1, icon: <Facebook /> },
+        { id: 2, icon: <Instagram /> },
+        { id: 3, icon: <X /> },
+        { id: 4, icon: <Linkedin /> },
+        
+    ]
     return (
         <div className="py-16 md:py-24 bg-white">
             <Container>
@@ -58,9 +67,9 @@ const ContactPage = () => {
                         <div className="pt-6 border-t border-gray-100">
                             <p className="font-semibold text-gray-900 mb-4">Follow Us</p>
                             <div className="flex gap-3">
-                                {['FB', 'IG', 'TW', 'YT'].map((social) => (
-                                    <div key={social} className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer">
-                                        {social}
+                                {icons.map((social) => (
+                                    <div key={social.id} className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer">
+                                        {social.icon}
                                     </div>
                                 ))}
                             </div>

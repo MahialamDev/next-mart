@@ -52,9 +52,8 @@ const Hero = () => {
                             {/* The Main Placeholder */}
                             <div className="w-full h-full bg-gradient-to-br from-blue-600 via-blue-400 to-indigo-600 rounded-[2rem] shadow-2xl rotate-3 flex items-center justify-center overflow-hidden group">
                                 <div className="absolute inset-0 bg-white/10 opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                                <span className="text-white font-medium text-lg -rotate-3">
-                                    Product Image Placeholder
-                                </span>
+                                
+                            <img className='w-full h-full' src="https://static.vecteezy.com/system/resources/thumbnails/000/964/198/small_2x/fast-food-meal-set.jpg" alt="d" />
                             </div>
 
                             {/* Floating Card (Extra Detail) */}

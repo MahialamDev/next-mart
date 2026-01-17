@@ -1,31 +1,60 @@
 "use client"; // State use karne ke liye zaruri hai
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Logo from '../UI/Logo/Logo';
 import { Menu, X } from 'lucide-react'; // Lucide-react icons use kar rahe hain
 import MyLink from '../UI/MyLink/MyLink';
 import { usePathname } from 'next/navigation';
+import { AuthContext } from '@/context/AuthContext';
 
 const links = (
     <>
         <li><MyLink href={'/'} className="hover:text-blue-600 transition">Home</MyLink></li>
         <li><MyLink href={'/about'} className="hover:text-blue-600 transition">About</MyLink></li>
-        <li><MyLink href={'/login'} className="hover:text-blue-600 transition">Login</MyLink></li>
         <li><MyLink href={'/items'} className="hover:text-blue-600 transition">Items</MyLink></li>
+        <li><MyLink href={'/dashboard'} className="hover:text-blue-600 transition">Dashboard</MyLink></li>
     </>
 );
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+    const {isAuth, setIsAuth} = useContext(AuthContext)
+    useEffect(() => {
+        const authCookie = document.cookie.split('; ').find(row => row.startsWith('auth='));
+        setIsAuth(authCookie?.split('=')[1] === 'true')
+    }, [setIsAuth])
+    
+
+
+    const handleLogout = () => {
+        document.cookie = 'auth=false; path=/'
+        setIsAuth(false)
+    }
+
+
+
 
     if (pathname.startsWith('/dashboard')) {
         return <></>
     }
 
+   
+
     return (
         <header className='h-20 flex items-center sticky top-0 w-full bg-white/90 backdrop-blur-xl z-50 border-b border-gray-500/20'>
             <div className='px-4 md:px-8 max-w-7xl mx-auto flex items-center justify-between w-full'>
+                {/* Mobile Hamburger Button */}
+                <div className='md:hidden flex items-center'>
+                    <button 
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="p-2 focus:outline-none"
+                    >
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
+                </div>
+
+                
                 <div>
                     <Logo />
                 </div>
@@ -37,15 +66,14 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                {/* Mobile Hamburger Button */}
-                <div className='md:hidden flex items-center'>
-                    <button 
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="p-2 focus:outline-none"
-                    >
-                        {isOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
-                </div>
+                
+
+
+                 
+                {isAuth ? <button onClick={handleLogout} className='btn btn-primary'>Logout</button> : <Link href={'/login'} className='btn btn-primary'>Login</Link>}
+            
+
+
             </div>
 
             {/* Mobile Sidebar/Dropdown */}
@@ -54,6 +82,9 @@ const Header = () => {
                     {links}
                 </ul>
             </div>
+
+           
+
         </header>
     );
 };
