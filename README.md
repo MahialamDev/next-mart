@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🛒 Next Mart - Food & Grocery Delivery Application
 
-First, run the development server:
+Next Mart is a modern, fast, and responsive food delivery web application built with **Next.js 16** and **Tailwind CSS**. It features a clean UI, category-based filtering, and a dedicated admin dashboard.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**🌐 Live Demo:** [next-mart-sepia.vercel.app](https://next-mart-sepia.vercel.app/)  
+**👤 Admin Credentials:** - **Email:** `admin@gmail.com`  
+- **Password:** `123456`
+
+---
+
+## 🚀 Features
+
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop screens.
+- **Dynamic Hero Section:** Engaging landing area with primary theme colors and call-to-action.
+- **Category Filtering:** Smooth, horizontal-scrollable category selection for better UX.
+- **Item Grid:** Optimized grid layout showing 2 items per row on mobile for better visibility.
+- **Authentication:** Mock login system with private route redirection to the dashboard.
+- **Admin Dashboard:** A sidebar-based dashboard featuring stats, recent orders, and navigation.
+- **Modern UI Components:** Built with Lucide Icons and customized Tailwind CSS/DaisyUI components.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Library:** React 19
+- **Styling:** Tailwind CSS 4, DaisyUI
+- **Icons:** Lucide React
+- **Deployment:** Vercel
+
+---
+
+## 📂 Route Summary
+
+| Route | Description |
+| :--- | :--- |
+| `/` | **Home:** Landing page with Hero, Categories, and Popular Items. |
+| `/about` | **About:** Company story, mission, and core values. |
+| `/contact` | **Contact:** Contact form with office location and social links. |
+| `/login` | **Login:** Authentication page for users/admin. |
+| `/items` | **Items:** Product listing page. |
+| `/dashboard` | **Dashboard:** Protected route for admin overview and stats. |
+
+---
+
+## ⚙️ Setup & Installation
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/MahialamDev/next-mart.git](https://github.com/MahialamDev/next-mart.git)
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Navigate to the project directory:**
+```bash
+cd next-mart
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+3. **Install dependencies:**
+```bash
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the development server:**
+```bash
+npm run dev
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Open in browser:**
+Visit [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to see the app.
+
+---
+
+## 💡 Feature Breakdown
+
+### 1. Mobile-First Navigation
+
+The header automatically switches to a hamburger menu on mobile devices, providing a seamless experience for smartphone users.
+
+### 2. Smart Grid System
+
+In the items section, we use a custom grid that displays **2 cards per row on mobile** and scales up to **4 cards on desktop**, ensuring product images remain large and clickable.
+
+### 3. Dashboard Analytics
+
+The dashboard provides a visual summary of total orders, pending tasks, and earnings using clean, card-based stats and a recent activity table.
+
+### 4. Optimized Routing
+
+Using Next.js App Router, the application uses folder-based routing with private folder structures (`_components`) to keep components separate from routes.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/MahialamDev/next-mart/issues).
+
+**Made with ❤️ by [Mahialam**](https://www.google.com/search?q=https://github.com/MahialamDev)
+
+```
+
+### Kivabe use korben?
+1. Apnar project folder-e `README.md` namer file-ti khulun.
+2. Uporer code-tuku copy kore paste korun.
+3. Save kore GitHub-e push kore din: 
+   `git add .` -> `git commit -m "docs: update readme"` -> `git push`.
+
+**Next Step:** Apnar ki project deployment ba onno kono technical issue-te help dorkar?
+
+```
