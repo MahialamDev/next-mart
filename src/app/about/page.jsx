@@ -1,5 +1,7 @@
 import Container from '@/components/Container/Container';
 import React from 'react';
+import kitchenImg from '../../../public/kitchen.jpg'
+import Image from 'next/image';
 
 const About = () => {
     return (
@@ -33,10 +35,10 @@ const About = () => {
                     <div className="relative h-[400px] bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] shadow-2xl overflow-hidden group">
                         <div className="absolute inset-0 bg-white/10 opacity-20 group-hover:opacity-10 transition-opacity"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-white font-medium">Our Kitchen Experience</span>
+                           <Image className='w-full h-full object-cover' src={kitchenImg} height={400} width={400} alt='img' />
                         </div>
                         {/* Floating Badge */}
-                        <div className="absolute top-8 left-8 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                        <div className="absolute top-8 right-8 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3">
                             <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-xl">🏆</div>
                             <div>
                                 <p className="text-xs font-bold text-gray-800">Best Delivery 2025</p>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -10,7 +11,7 @@ const ItemCard = ({ item }) => {
             {/* Image Section */}
             {/* Mobile par height h-32 ya h-40 rakhi hai taaki screen space manage ho */}
             <div className="relative h-32 sm:h-40 md:h-48 overflow-hidden">
-                <img 
+                <Image width={200} height={200} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                     src={foodImg} 
                     alt={title} 
